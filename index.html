@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário Sombrio — Início</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Gothic & Typewriter aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #120e0b;
+            color: #2c241d;
+        }
+        .font-typewriter { font-family: 'Special Elite', monospace; }
+        .font-courier { font-family: 'Courier Prime', monospace; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        
+        .leather-bg {
+            background-color: #1a1310;
+            background-image: radial-gradient(circle at 50% 50%, #241a15 0%, #120e0b 100%),
+                              repeating-radial-gradient(circle at 0 0, transparent 0, #000 2px, transparent 4px);
+            background-blend-mode: overlay;
+        }
+        .aged-paper {
+            background-color: #f4eee1;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            box-shadow: inset 0 0 40px rgba(110, 85, 60, 0.15), 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .binder-ring {
+            background: linear-gradient(90deg, #111, #555 30%, #fff 50%, #555 70%, #111);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.6), 2px 5px 8px rgba(0,0,0,0.8);
+            border-radius: 9999px;
+        }
+        .vintage-polaroid {
+            background: #fff;
+            padding: 10px 10px 25px 10px;
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+            transform: rotate(-1.5deg);
+            transition: transform 0.3s ease;
+        }
+        .vintage-polaroid:hover { transform: rotate(0deg) scale(1.02); }
+        .tab-btn {
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background-color: #f4eee1;
+            color: #1a1310;
+            border-left: 4px solid #4a3525;
+            font-weight: bold;
+            transform: translateX(4px);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #e8dfcf; }
+        ::-webkit-scrollbar-thumb { background: #b5a48f; border-radius: 3px; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-2 sm:p-6 leather-bg">
+
+    <!-- Renda Gótica Superior -->
+    <div class="w-full max-w-5xl opacity-80 mb-1 flex items-center justify-center overflow-hidden">
+        <svg class="w-full h-6 text-[#dcd2be]" fill="currentColor" viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path d="M0,0 Q30,25 60,0 Q90,25 120,0 Q150,25 180,0 Q210,25 240,0 Q270,25 300,0 Q330,25 360,0 Q390,25 420,0 Q450,25 480,0 Q510,25 540,0 Q570,25 600,0 Q630,25 660,0 Q690,25 720,0 Q750,25 780,0 Q810,25 840,0 Q870,25 900,0 Q930,25 960,0 Q990,25 1020,0 Q1050,25 1080,0 Q1110,25 1140,0 Q1170,25 1200,0 L1200,30 L0,30 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Fichário Principal -->
+    <div class="w-full max-w-5xl bg-[#140f0c] rounded-2xl shadow-2xl border-4 border-[#2b1e16] flex flex-col md:flex-row relative overflow-hidden my-1">
+        
+        <!-- Lombada / Argolas -->
+        <div class="w-full md:w-20 bg-gradient-to-r from-[#241a14] via-[#1c130f] to-[#110b08] p-4 flex md:flex-col justify-around items-center border-b md:border-b-0 md:border-r-2 border-[#090605] relative shadow-inner z-20">
+            <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#443125_1px,transparent_1px)] [background-size:8px_8px]"></div>
+            <div class="text-xs font-cinzel text-[#8c7862] tracking-widest hidden md:block writing-mode-vertical rotate-180 mb-2">VOL. I</div>
+            <div class="flex md:flex-col justify-between w-full h-full py-6 md:py-8 items-center z-10 space-x-3 md:space-x-0 md:space-y-6">
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+            </div>
+            <div class="text-xs font-cinzel text-[#8c7862] tracking-widest hidden md:block mt-2">MMSIII</div>
+        </div>
+
+        <!-- Navegação Multipágina -->
+        <div class="w-full md:w-52 bg-[#1b130e] border-r border-[#2d2018] flex md:flex-col flex-row overflow-x-auto p-3 gap-2 z-10">
+            <div class="px-3 py-2 text-[#a89880] font-cinzel text-xs tracking-widest uppercase border-b border-[#36261d] mb-2 hidden md:block">
+                Índice
+            </div>
+            
+            <a href="index.html" class="tab-btn active text-left px-4 py-3 rounded text-[#d4c5af] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Início / Main
+            </a>
+            <a href="perfil.html" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Perfil
+            </a>
+            <a href="obras.html" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Obras Prediletas
+            </a>
+            <a href="diario.html" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Diário / Notes
+            </a>
+            <a href="calendario.html" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Calendário
+            </a>
+            <a href="conexoes.html" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2">
+                <span>✦</span> Conexões / Links
+            </a>
+
+            <div class="mt-auto hidden md:block p-3 border border-[#3b2a20] rounded bg-[#16100c] text-center">
+                <p class="text-[10px] font-courier text-[#96826d] italic">"Seek internal knowledge about your own feelings."</p>
+            </div>
+        </div>
+
+        <!-- Conteúdo: Início -->
+        <div class="flex-1 aged-paper p-6 md:p-10 relative overflow-y-auto max-h-[85vh]">
+            <div class="absolute right-10 bottom-10 opacity-5 pointer-events-none">
+                <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,4M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,6H13V11H18V13H13V18H11V13H6V11H11V6Z"/>
+                </svg>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                    <div>
+                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Arquivo nº 1983-SP</span>
+                        <h1 class="text-3xl sm:text-5xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">NOCTURNE DIARY</h1>
+                    </div>
+                    <div class="text-right mt-2 sm:mt-0">
+                        <span class="text-xs font-typewriter text-[#574435]">Status: <span class="text-emerald-900 font-bold">Investigando o Oculto</span></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-4">
+                        <p class="font-typewriter text-lg leading-relaxed text-[#362920]">
+                            "Durante estas relações, vários sentimentos são experienciados e transformados. Certamente, o amor e o mistério ocupam uma posição fundamental e essencial na vida humana..."
+                        </p>
+                        <p class="font-courier text-sm text-[#574435] italic">
+                            — Fragmentos de anotações encontradas na estrada de paralelepípedos, sob neblina densa e pinheiros silenciosos.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="vintage-polaroid w-48">
+                            <div class="w-full h-40 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                                <img src="https://placehold.co/200x200/1c1512/d1c4b2?text=Deer+Forest" alt="Forest placeholder" class="object-cover w-full h-full opacity-80 filter sepia">
+                            </div>
+                            <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">região_leste.log</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#ede4d0] border border-[#d0c2ad] p-5 rounded shadow-sm space-y-3">
+                    <h3 class="font-cinzel font-bold text-lg text-[#261d15] border-b border-[#d8ccb8] pb-1">✦ Notas de Campo & Arquivos</h3>
+                    <p class="font-courier text-sm text-[#382b21] leading-relaxed">
+                        Bem-vindo ao fichário digital multipágina. Aqui catalogamos impressões sobre thrillers psicológicos, investigações sombrias ao estilo <span class="font-bold text-[#1c140f]">Supernatural</span> e <span class="font-bold text-[#1c140f]">Hannibal</span>, além de reflexões poéticas. Utilize o menu lateral para alternar entre as páginas de forma fluida.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="w-full max-w-5xl opacity-80 mt-1 flex items-center justify-center overflow-hidden rotate-180">
+        <svg class="w-full h-6 text-[#dcd2be]" fill="currentColor" viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path d="M0,0 Q30,25 60,0 Q90,25 120,0 Q150,25 180,0 Q210,25 240,0 Q270,25 300,0 Q330,25 360,0 Q390,25 420,0 Q450,25 480,0 Q510,25 540,0 Q570,25 600,0 Q630,25 660,0 Q690,25 720,0 Q750,25 780,0 Q810,25 840,0 Q870,25 900,0 Q930,25 960,0 Q990,25 1020,0 Q1050,25 1080,0 Q1110,25 1140,0 Q1170,25 1200,0 L1200,30 L0,30 Z"></path>
+        </svg>
+    </div>
+
+    <footer class="mt-4 text-center font-courier text-[11px] text-[#7a6752]">
+        Diário Sombrio Fichário — Multipágina Estático.
+    </footer>
+</body>
+</html>
