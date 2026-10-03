@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Cross</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Gothic & Typewriter aesthetic -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -177,31 +178,43 @@
             <!-- ABA 2: PERFIL -->
             <div id="tab-perfil" class="tab-content space-y-6">
                 <div class="border-b-2 border-[#3d2e23] pb-4">
-                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Dossiê Pessoal</span>
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Dossiê Pessoal Detalhado</span>
                     <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">VINCENT CROSS</h1>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center space-y-4">
                         <div class="vintage-polaroid w-56">
                             <div class="w-full h-56 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
                                 <img src="vince.jpg" alt="Vincent Cross" class="object-cover w-full h-full opacity-90 filter sepia">
                             </div>
                             <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">investigador_chefe.png</p>
                         </div>
+                        <div class="vintage-polaroid w-56">
+                            <div class="w-full h-40 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                                <img src="photo.jpg" alt="Árvores" class="object-cover w-full h-full opacity-85 filter sepia">
+                            </div>
+                            <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">natureza_nublada.png</p>
+                        </div>
                     </div>
                     <div class="md:col-span-2 space-y-4 font-typewriter text-sm text-[#362920] leading-relaxed">
                         <div class="bg-[#ede4d0] p-4 rounded border border-[#d2c4b0]">
-                            <h4 class="font-cinzel font-bold text-base text-[#211812] mb-2">✦ Informações Biográficas</h4>
+                            <h4 class="font-cinzel font-bold text-base text-[#211812] mb-2">✦ Informações Biográficas & Psicológicas</h4>
                             <ul class="space-y-2 font-courier text-xs">
                                 <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Codinome:</span> <span class="font-bold">Nocturne</span></li>
-                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Especialidade:</span> <span class="font-bold">Psicologia Criminal & Ocultismo</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Especialidade:</span> <span class="font-bold">Psicologia Criminal, Ocultismo, Psicologia & Investigação</span></li>
                                 <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Localização Atual:</span> <span class="font-bold">Mansão Blackwood, SP</span></li>
-                                <li class="flex justify-between pb-1"><span>Estado Mental:</span> <span class="text-emerald-900 font-bold">Vigilante / Focado</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Estado Mental:</span> <span class="text-emerald-900 font-bold">Frágil</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Neurodivergências:</span> <span class="font-bold">TDAH , Discalculia</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Afiliações:</span> <span class="font-bold">Não foi possível indentificar</span></li>
+                                <li class="flex justify-between pb-1"><span>Marcas Particulares:</span> <span class="font-bold">Cicatriz leve no antebraço direito; colecionador de relógios de bolso antigos</span></li>
                             </ul>
                         </div>
                         <p>
-                            "Colecionador de enigmas e vinis antigos. Acredito que a verdade reside sempre nas entrelinhas do que não é dito e na penumbra dos corredores."
+                            "Colecionador de enigmas, vinis antigos e manuscritos esquecidos pelo tempo. Acredito que a verdade reside sempre nas entrelinhas do que não é dito, nas entranhas dos arquivos corrompidos e na penumbra úmida dos corredores esquecidos."
+                        </p>
+                        <p class="text-xs text-[#574435] italic">
+                            Nota de campo extra: Sob pressão extrema, mantém uma calmaria perturbadora, analisando cada variável do ambiente com frieza e atenção impecável aos detalhes mínimos. Entretanto, tem grande dificuldade em expressar seus raciocínios.
                         </p>
                     </div>
                 </div>
@@ -225,9 +238,9 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
                     
                     <!-- Polaroid 1 -->
-                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Blackwood Legacy', 'Um tratado profundo sobre dinâmicas familiares corrompidas e segredos seculares guardados sob o assoalho de madeira.', 'https://placehold.co/300x300/1c1512/d1c4b2?text=Blackwood+Legacy')">
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Blackwood Legacy', 'Um tratado profundo sobre dinâmicas familiares corrompidas e segredos seculares guardados sob o assoalho de madeira.', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400')">
                         <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
-                            <img src="https://placehold.co/300x300/1c1512/d1c4b2?text=Blackwood+Legacy" alt="The Blackwood Legacy" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400" alt="The Blackwood Legacy" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
                         </div>
                         <div class="mt-3 text-center">
                             <p class="font-typewriter text-xs font-bold text-[#2b1f17]">The Blackwood Legacy</p>
@@ -236,9 +249,9 @@
                     </div>
 
                     <!-- Polaroid 2 -->
-                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Silence in Red Room', 'Análise minuciosa de perfis psicológicos complexos e mentes brilhantes porém perigosas em ambientes confinados.', 'https://placehold.co/300x300/211212/e6c5c5?text=Red+Room')">
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Silence in Red Room', 'Análise minuciosa de perfis psicológicos complexos e mentes brilhantes porém perigosas em ambientes confinados.', 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400')">
                         <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
-                            <img src="https://placehold.co/300x300/211212/e6c5c5?text=Red+Room" alt="Silence in Red Room" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400" alt="Silence in Red Room" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
                         </div>
                         <div class="mt-3 text-center">
                             <p class="font-typewriter text-xs font-bold text-[#2b1f17]">Silence in Red Room</p>
@@ -247,9 +260,9 @@
                     </div>
 
                     <!-- Polaroid 3 -->
-                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Midnight Sonata', 'Composição instrumental melancólica gravada em vinil de 180g nas catacumbas de Praga.', 'https://placehold.co/300x300/121821/c5d1e6?text=Midnight+Sonata')">
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Midnight Sonata', 'Composição instrumental melancólica gravada em vinil de 180g nas catacumbas de Praga.', 'https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&q=80&w=400')">
                         <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
-                            <img src="https://placehold.co/300x300/121821/c5d1e6?text=Midnight+Sonata" alt="Midnight Sonata" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&q=80&w=400" alt="Midnight Sonata" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
                         </div>
                         <div class="mt-3 text-center">
                             <p class="font-typewriter text-xs font-bold text-[#2b1f17]">Midnight Sonata</p>
@@ -258,9 +271,9 @@
                     </div>
 
                     <!-- Polaroid 4 -->
-                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Hollow Pines', 'Fotografias analógicas tiradas na rodovia vicinal durante a neblina de outono de 1994.', 'https://placehold.co/300x300/151c15/c5e6cb?text=Hollow+Pines')">
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Hollow Pines', 'Fotografias analógicas tiradas na rodovia vicinal durante a neblina de outono de 1994.', 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=400')">
                         <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
-                            <img src="https://placehold.co/300x300/151c15/c5e6cb?text=Hollow+Pines" alt="The Hollow Pines" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=400" alt="The Hollow Pines" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
                         </div>
                         <div class="mt-3 text-center">
                             <p class="font-typewriter text-xs font-bold text-[#2b1f17]">The Hollow Pines</p>
@@ -336,22 +349,21 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <a href="https://br.pinterest.com/09vince/" onclick="showModalMessage('Rede Externa', 'Abrindo canal seguro para perfil de Vincent...')" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                    <a href="https://br.pinterest.com/09vince/" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
                         <span class="text-xl">✦</span>
                         <div>
                             <p class="font-cinzel font-bold text-sm text-[#261d15]">Pinterest</p>
                             <p class="font-courier text-xs text-[#6e5844]">@09vince/</p>
                         </div>
                     </a>
-                    <a href="https://youtube.com/@tsuhx?si=gLsDPLwyrfmYnnYT" onclick="showModalMessage('Rede Externa', 'Estabelecendo conexão segura com Youtube...')" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                    <a href="https://youtube.com/@tsuhx?si=gLsDPLwyrfmYnnYT" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
                         <span class="text-xl">✦</span>
                         <div>
                             <p class="font-cinzel font-bold text-sm text-[#261d15]">Youtube</p>
                             <p class="font-courier text-xs text-[#6e5844]">@tsuhx</p>
                         </div>
                     </a>
-
-                   <a href="https://open.spotify.com/user/31zxoln3zye3npyolforazzl4re4?si=503eb6f3b07c4e65" onclick="showModalMessage('Rede Externa', 'Estabelecendo conexão segura com Spotify, ousa as melhores músicas...')" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                    <a href="https://open.spotify.com/user/31zxoln3zye3npyolforazzl4re4?si=503eb6f3b07c4e65" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
                         <span class="text-xl">✦</span>
                         <div>
                             <p class="font-cinzel font-bold text-sm text-[#261d15]">Spotify</p>
@@ -366,73 +378,47 @@
     </div>
 
     <!-- Renda Gótica Inferior -->
-    <div class="w-full max-w-5xl opacity-80 mt-1 flex items-center justify-center overflow-hidden rotate-180">
+    <div class="w-full max-w-5xl opacity-80 mt-1 flex items-center justify-center overflow-hidden">
         <svg class="w-full h-6 text-[#dcd2be]" fill="currentColor" viewBox="0 0 1200 30" preserveAspectRatio="none">
-            <path d="M0,0 Q30,25 60,0 Q90,25 120,0 Q150,25 180,0 Q210,25 240,0 Q270,25 300,0 Q330,25 360,0 Q390,25 420,0 Q450,25 480,0 Q510,25 540,0 Q570,25 600,0 Q630,25 660,0 Q690,25 720,0 Q750,25 780,0 Q810,25 840,0 Q870,25 900,0 Q930,25 960,0 Q990,25 1020,0 Q1050,25 1080,0 Q1110,25 1140,0 Q1170,25 1200,0 L1200,30 L0,30 Z"></path>
+            <path d="M0,30 Q30,5 60,30 Q90,5 120,30 Q150,5 180,30 Q210,5 240,30 Q270,5 300,30 Q330,5 360,30 Q390,5 420,30 Q450,5 480,30 Q510,5 540,30 Q570,5 600,30 Q630,5 660,30 Q690,5 720,30 Q750,5 780,30 Q810,5 840,30 Q870,5 900,30 Q930,5 960,30 Q990,5 1020,30 Q1050,5 1080,30 Q1110,5 1140,30 Q1170,5 1200,30 L1200,0 L0,0 Z"></path>
         </svg>
     </div>
 
-    <!-- Modal Personalizado (Substitui alert) -->
-    <div id="custom-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
-        <div class="bg-[#f4eee1] border-4 border-[#3a2c22] rounded-lg max-w-md w-full p-6 shadow-2xl relative">
-            <h3 id="modal-title" class="font-cinzel font-bold text-xl text-[#211812] border-b border-[#d0c2ad] pb-2 mb-3">Título</h3>
-            <p id="modal-text" class="font-typewriter text-sm text-[#382b21] leading-relaxed mb-6">Mensagem descritiva da evidência...</p>
-            <div class="text-right">
-                <button onclick="closeModal()" class="bg-[#3a2c22] text-[#f4eee1] font-typewriter px-5 py-2 rounded text-xs hover:bg-[#4a3525] transition shadow">Fechar Inspecionamento</button>
-            </div>
-        </div>
-    </div>
-
-    <footer class="mt-4 text-center font-courier text-[11px] text-[#7a6752]">
-        Diário Sombrio Fichário — Arquivo Único Multipágina Interativo.
-    </footer>
-
+    <!-- Script de Abas e Modais -->
     <script>
         function switchTab(tabId) {
-            // Oculta todas as abas
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
-            // Remove classe ativa de todos os botões
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Mostra a aba selecionada
-            const selectedTab = document.getElementById('tab-' + tabId);
-            if (selectedTab) {
-                selectedTab.classList.add('active');
-            }
-
-            // Ativa o botão correspondente
-            const selectedBtn = document.getElementById('btn-' + tabId);
-            if (selectedBtn) {
-                selectedBtn.classList.add('active');
-            }
-
-            // Reseta a rolagem do conteúdo
-            const container = document.querySelector('.aged-paper');
-            if (container) {
-                container.scrollTop = 0;
-            }
+            document.getElementById('tab-' + tabId).classList.add('active');
+            document.getElementById('btn-' + tabId).classList.add('active');
         }
 
-        function openPolaroidModal(title, description, imgUrl) {
-            document.getElementById('modal-title').innerText = "✦ Evidência: " + title;
-            document.getElementById('modal-text').innerText = description;
-            document.getElementById('custom-modal').classList.remove('hidden');
-            document.getElementById('custom-modal').classList.add('flex');
-        }
+        function openPolaroidModal(title, desc, imgUrl) {
+            const modalId = 'polaroid-inspection-modal';
+            let existingModal = document.getElementById(modalId);
+            if (existingModal) existingModal.remove();
 
-        function showModalMessage(title, message) {
-            document.getElementById('modal-title').innerText = "✦ " + title;
-            document.getElementById('modal-text').innerText = message;
-            document.getElementById('custom-modal').classList.remove('hidden');
-            document.getElementById('custom-modal').classList.add('flex');
-        }
-
-        function closeModal() {
-            document.getElementById('custom-modal').classList.remove('flex');
-            document.getElementById('custom-modal').classList.add('hidden');
+            const modal = document.createElement('div');
+            modal.id = modalId;
+            modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-[#f4eee1] p-6 rounded-lg max-w-md w-full border-4 border-[#3d2e23] shadow-2xl relative space-y-4">
+                    <button onclick="document.getElementById('${modalId}').remove()" class="absolute top-3 right-3 text-[#574435] hover:text-black font-cinzel font-bold text-lg">✕</button>
+                    <div class="text-center">
+                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Evidência Catalogada</span>
+                        <h3 class="font-cinzel font-bold text-xl text-[#211812] mt-1">${title}</h3>
+                    </div>
+                    <div class="w-full h-64 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2] rounded">
+                        <img src="${imgUrl}" alt="${title}" class="object-cover w-full h-full filter sepia">
+                    </div>
+                    <p class="font-typewriter text-sm text-[#382b21] leading-relaxed">${desc}</p>
+                    <div class="text-right">
+                        <button onclick="document.getElementById('${modalId}').remove()" class="px-4 py-2 bg-[#3d2e23] text-[#f4eee1] font-typewriter text-xs rounded hover:bg-[#2b1f17] transition">Fechar Inspecionador</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
         }
     </script>
 </body>
