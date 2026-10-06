@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Cross</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -74,6 +72,360 @@
         ::-webkit-scrollbar-track { background: #e8dfcf; }
         ::-webkit-scrollbar-thumb { background: #b5a48f; border-radius: 3px; }
     </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-2 sm:p-6 leather-bg">
+    <div class="w-full max-w-5xl opacity-80 mb-1 flex items-center justify-center overflow-hidden">
+        <svg class="w-full h-6 text-[#dcd2be]" fill="currentColor" viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path d="M0,0 Q30,25 60,0 Q90,25 120,0 Q150,25 180,0 Q210,25 240,0 Q270,25 300,0 Q330,25 360,0 Q390,25 420,0 Q450,25 480,0 Q510,25 540,0 Q570,25 600,0 Q630,25 660,0 Q690,25 720,0 Q750,25 780,0 Q810,25 840,0 Q870,25 900,0 Q930,25 960,0 Q990,25 1020,0 Q1050,25 1080,0 Q1110,25 1140,0 Q1170,25 1200,0 L1200,30 L0,30 Z"></path>
+        </svg>
+    </div>
+    <div class="w-full max-w-5xl bg-[#140f0c] rounded-2xl shadow-2xl border-4 border-[#2b1e16] flex flex-col md:flex-row relative overflow-hidden my-1">
+        
+        <div class="w-full md:w-20 bg-gradient-to-r from-[#241a14] via-[#1c130f] to-[#110b08] p-4 flex md:flex-col justify-around items-center border-b md:border-b-0 md:border-r-2 border-[#090605] relative shadow-inner z-20">
+            <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#443125_1px,transparent_1px)] [background-size:8px_8px]"></div>
+            <div class="text-xs font-cinzel text-[#8c7862] tracking-widest hidden md:block writing-mode-vertical rotate-180 mb-2">VOL. I</div>
+            <div class="flex md:flex-col justify-between w-full h-full py-6 md:py-8 items-center z-10 space-x-3 md:space-x-0 md:space-y-6">
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+                <div class="w-4 h-8 md:w-10 md:h-5 binder-ring"></div>
+            </div>
+            <div class="text-xs font-cinzel text-[#8c7862] tracking-widest hidden md:block mt-2">MMSIII</div>
+        </div>
+
+
+        <div class="w-full md:w-52 bg-[#1b130e] border-r border-[#2d2018] flex md:flex-col flex-row overflow-x-auto p-3 gap-2 z-10">
+            <div class="px-3 py-2 text-[#a89880] font-cinzel text-xs tracking-widest uppercase border-b border-[#36261d] mb-2 hidden md:block">
+                Índice
+            </div>
+            
+            <button onclick="switchTab('inicio')" id="btn-inicio" class="tab-btn active text-left px-4 py-3 rounded text-[#d4c5af] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Início
+            </button>
+            <button onclick="switchTab('perfil')" id="btn-perfil" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Perfil
+            </button>
+            <button onclick="switchTab('obras')" id="btn-obras" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Obras Prediletas
+            </button>
+            <button onclick="switchTab('diario')" id="btn-diario" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Diário / Notes
+            </button>
+            <button onclick="switchTab('calendario')" id="btn-calendario" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Calendário
+            </button>
+            <button onclick="switchTab('conexoes')" id="btn-conexoes" class="tab-btn text-left px-4 py-3 rounded text-[#a89880] hover:text-white font-typewriter text-sm tracking-wide flex items-center gap-2 whitespace-nowrap">
+                <span>──</span> Conexões
+            </button>
+
+            <div class="mt-auto hidden md:block p-3 border border-[#3b2a20] rounded bg-[#16100c] text-center">
+                <p class="text-[10px] font-courier text-[#96826d] italic">"Seek internal knowledge about your own feelings."</p>
+            </div>
+        </div>
+
+        <div class="flex-1 aged-paper p-6 md:p-10 relative overflow-y-auto max-h-[85vh]">
+
+            <div id="tab-inicio" class="tab-content active space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                    <div>
+                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Arquivo nº 1983-SP</span>
+                        <h1 class="text-3xl sm:text-5xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">NOCTURNE DIARY</h1>
+                    </div>
+                    <div class="text-right mt-2 sm:mt-0">
+                        <span class="text-xs font-typewriter text-[#574435]">Status: <span class="text-emerald-900 font-bold">Investigando o Oculto</span></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-4">
+                        <p class="font-typewriter text-lg leading-relaxed text-[#362920]">
+                            "Durante estas relações, vários sentimentos são experienciados e transformados. Certamente, o amor e o mistério ocupam uma posição fundamental e essencial na vida humana..."
+                        </p>
+                        <p class="font-courier text-sm text-[#574435] italic">
+                            — Fragmentos de anotações encontradas na estrada de paralelepípedos, sob neblina densa e pinheiros silenciosos por Vincent Cross.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="vintage-polaroid w-48">
+                            <div class="w-full h-40 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                                <img src="flower.jpg" alt="A Flower" class="object-cover w-full h-full opacity-80 filter sepia">
+                            </div>
+                            <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">flores_sem_vida.log</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#ede4d0] border border-[#d0c2ad] p-5 rounded shadow-sm space-y-3">
+                    <h3 class="font-cinzel font-bold text-lg text-[#261d15] border-b border-[#d8ccb8] pb-1">✦ Notas de Campo & Arquivos</h3>
+                    <p class="font-courier text-sm text-[#382b21] leading-relaxed">
+                        Bem-vindo ao fichário digital multipágina de Vincent Cross. Aqui catalogamos impressões sobre thrillers psicológicos, investigações sombrias ao estilo <span class="font-bold text-[#1c140f]">Supernatural</span> e <span class="font-bold text-[#1c140f]">Hannibal</span>, além de reflexões poéticas. Utilize o menu lateral para alternar entre as abas sem recarregar a página.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tab-perfil" class="tab-content space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4">
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Dossiê Pessoal Detalhado</span>
+                    <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">VINCENT CROSS</h1>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="vintage-polaroid w-56">
+                            <div class="w-full h-56 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                                <img src="vince.jpg" alt="Vincent Cross" class="object-cover w-full h-full opacity-90 filter sepia">
+                            </div>
+                            <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">investigador_chefe.png</p>
+                        </div>
+                        <div class="vintage-polaroid w-56">
+                            <div class="w-full h-40 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                                <img src="photo.jpg" alt="Árvores" class="object-cover w-full h-full opacity-85 filter sepia">
+                            </div>
+                            <p class="text-center font-typewriter text-xs text-[#3a2c22] mt-3">natureza_nublada.png</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 space-y-4 font-typewriter text-sm text-[#362920] leading-relaxed">
+                        <div class="bg-[#ede4d0] p-4 rounded border border-[#d2c4b0]">
+                            <h4 class="font-cinzel font-bold text-base text-[#211812] mb-2">✦ Informações Biográficas & Psicológicas</h4>
+                            <ul class="space-y-2 font-courier text-xs">
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Codinome:</span> <span class="font-bold">Nocturne</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Especialidade:</span> <span class="font-bold">Psicologia Criminal, Ocultismo, Psicologia & Investigação</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Localização Atual:</span> <span class="font-bold">Mansão Blackwood, SP</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Estado Mental:</span> <span class="text-emerald-900 font-bold">Frágil</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Neurodivergências:</span> <span class="font-bold">TDAH , Discalculia</span></li>
+                                <li class="flex justify-between border-b border-[#dfd2be] pb-1"><span>Afiliações:</span> <span class="font-bold">Não foi possível indentificar</span></li>
+                                <li class="flex justify-between pb-1"><span>Marcas Particulares:</span> <span class="font-bold">Cicatriz leve no antebraço direito; colecionador de relógios de bolso antigos</span></li>
+                            </ul>
+                        </div>
+                        <p>
+                            "Colecionador de enigmas, vinis antigos e manuscritos esquecidos pelo tempo. Acredito que a verdade reside sempre nas entrelinhas do que não é dito, nas entranhas dos arquivos corrompidos e na penumbra úmida dos corredores esquecidos."
+                        </p>
+                        <p class="text-xs text-[#574435] italic">
+                            Nota de campo extra: Sob pressão extrema, mantém uma calmaria perturbadora, analisando cada variável do ambiente com frieza e atenção impecável aos detalhes mínimos. Entretanto, tem grande dificuldade em expressar seus raciocínios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    
+            <div id="tab-obras" class="tab-content space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4 flex justify-between items-end">
+                    <div>
+                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Galeria de Evidências</span>
+                        <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">OBRAS PREDILETAS</h1>
+                    </div>
+                    <span class="text-xs font-typewriter text-[#574435] hidden sm:inline">Clique nas Polaroids para inspecionar</span>
+                </div>
+
+                <p class="font-typewriter text-sm text-[#47372b]">
+                    Arquivos fotográficos e literários catalogados por Vincent Cross ao longo de investigações noturnas:
+                </p>
+
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+                    
+
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Blackwood Legacy', 'Um tratado profundo sobre dinâmicas familiares corrompidas e segredos seculares guardados sob o assoalho de madeira.', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400')">
+                        <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400" alt="The Blackwood Legacy" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="font-typewriter text-xs font-bold text-[#2b1f17]">The Blackwood Legacy</p>
+                            <p class="font-courier text-[10px] text-[#6e5844] mt-1">Livro I — Manuscrito</p>
+                        </div>
+                    </div>
+
+    
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Silence in Red Room', 'Análise minuciosa de perfis psicológicos complexos e mentes brilhantes porém perigosas em ambientes confinados.', 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400')">
+                        <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400" alt="Silence in Red Room" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="font-typewriter text-xs font-bold text-[#2b1f17]">Silence in Red Room</p>
+                            <p class="font-courier text-[10px] text-[#6e5844] mt-1">Filme / Thriller</p>
+                        </div>
+                    </div>
+
+    
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('Midnight Sonata', 'Composição instrumental melancólica gravada em vinil de 180g nas catacumbas de Praga.', 'https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&q=80&w=400')">
+                        <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                            <img src="https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&q=80&w=400" alt="Midnight Sonata" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="font-typewriter text-xs font-bold text-[#2b1f17]">Midnight Sonata</p>
+                            <p class="font-courier text-[10px] text-[#6e5844] mt-1">Álbum — Vinil #04</p>
+                        </div>
+                    </div>
+
+                    <div class="vintage-polaroid cursor-pointer group" onclick="openPolaroidModal('The Hollow Pines', 'Fotografias analógicas tiradas na rodovia vicinal durante a neblina de outono de 1994.', 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=400')">
+                        <div class="w-full h-52 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2]">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=400" alt="The Hollow Pines" class="object-cover w-full h-full filter sepia group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="font-typewriter text-xs font-bold text-[#2b1f17]">The Hollow Pines</p>
+                            <p class="font-courier text-[10px] text-[#6e5844] mt-1">Série Fotográfica</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="tab-diario" class="tab-content space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4">
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Registro Diário</span>
+                    <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">DIÁRIO / NOTES</h1>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-[#ede4d0] p-5 rounded border border-[#d1c2ad] shadow-sm">
+                        <div class="flex justify-between items-center border-b border-[#d8ccb8] pb-2 mb-3">
+                            <h3 class="font-cinzel font-bold text-base text-[#261d15]">✦ Entrada #42 — A Néblina de Outubro</h3>
+                            <span class="font-courier text-xs text-[#735d48]">14 de Outubro, 03:15 AM</span>
+                        </div>
+                        <p class="font-typewriter text-sm text-[#382b21] leading-relaxed">
+                            "O vento bateu contra a vidraça três vezes seguidas antes de cessar por completo. Não havia ninguém na alameda principal, apenas pegadas úmidas que terminavam abruptamente no portão de ferro forjado. Continuo investigando a procedência do colar de prata encontrado na biblioteca."
+                        </p>
+                    </div>
+
+                    <div class="bg-[#ede4d0] p-5 rounded border border-[#d1c2ad] shadow-sm">
+                        <div class="flex justify-between items-center border-b border-[#d8ccb8] pb-2 mb-3">
+                            <h3 class="font-cinzel font-bold text-base text-[#261d15]">✦ Entrada #41 — O Símbolo na Parede</h3>
+                            <span class="font-courier text-xs text-[#735d48]">02 de Outubro, 11:40 PM</span>
+                        </div>
+                        <p class="font-typewriter text-sm text-[#382b21] leading-relaxed">
+                            "As marcas de giz deixadas no porão coincidem perfeitamente com os esboços do diário de campo de 1978. A cada página preenchida, sinto que estamos mais próximos de decifrar o enigma."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+ 
+            <div id="tab-calendario" class="tab-content space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4">
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Cronograma de Vistorias</span>
+                    <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">CALENDÁRIO</h1>
+                </div>
+
+                <div class="bg-[#ede4d0] p-5 rounded border border-[#d1c2ad] shadow-sm space-y-4">
+                    <h3 class="font-cinzel font-bold text-base text-[#261d15]">Outubro / 2026</h3>
+                    <div class="grid grid-cols-7 gap-2 text-center font-typewriter text-xs">
+                        <div class="font-bold text-[#6e5844] py-1">DOM</div>
+                        <div class="font-bold text-[#6e5844] py-1">SEG</div>
+                        <div class="font-bold text-[#6e5844] py-1">TER</div>
+                        <div class="font-bold text-[#6e5844] py-1">QUA</div>
+                        <div class="font-bold text-[#6e5844] py-1">QUI</div>
+                        <div class="font-bold text-[#6e5844] py-1">SEX</div>
+                        <div class="font-bold text-[#6e5844] py-1">SÁB</div>
+                        
+
+                        <div class="p-2 text-[#b09e86]">27</div><div class="p-2 text-[#b09e86]">28</div><div class="p-2 text-[#b09e86]">29</div><div class="p-2 text-[#b09e86]">30</div><div class="p-2 bg-[#dcd0bc] rounded font-bold">1</div><div class="p-2 bg-[#4a3525] text-white rounded font-bold">2</div><div class="p-2">3</div>
+                        <div class="p-2">4</div><div class="p-2">5</div><div class="p-2 bg-[#dcd0bc] rounded">6</div><div class="p-2">7</div><div class="p-2">8</div><div class="p-2">9</div><div class="p-2">10</div>
+                        <div class="p-2">11</div><div class="p-2">12</div><div class="p-2">13</div><div class="p-2 bg-[#dcd0bc] rounded">14</div><div class="p-2">15</div><div class="p-2">16</div><div class="p-2">17</div>
+                    </div>
+                    <p class="font-courier text-xs text-[#574435] mt-2 italic">✦ Destaque (2 de Outubro): Vistoria noturna agendada na ala oeste.</p>
+                </div>
+            </div>
+
+
+            <div id="tab-conexoes" class="tab-content space-y-6">
+                <div class="border-b-2 border-[#3d2e23] pb-4">
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Rede de Contatos</span>
+                    <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">CONEXÕES / LINKS</h1>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="https://br.pinterest.com/09vince/" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                        <span class="text-xl">✦</span>
+                        <div>
+                            <p class="font-cinzel font-bold text-sm text-[#261d15]">Pinterest</p>
+                            <p class="font-courier text-xs text-[#6e5844]">@09vince/</p>
+                        </div>
+                    </a>
+                    <a href="https://youtube.com/@tsuhx?si=gLsDPLwyrfmYnnYT" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                        <span class="text-xl">✦</span>
+                        <div>
+                            <p class="font-cinzel font-bold text-sm text-[#261d15]">Youtube</p>
+                            <p class="font-courier text-xs text-[#6e5844]">@tsuhx</p>
+                        </div>
+                    </a>
+                    <a href="https://open.spotify.com/user/31zxoln3zye3npyolforazzl4re4?si=503eb6f3b07c4e65" target="_blank" class="bg-[#ede4d0] p-4 rounded border border-[#d1c2ad] hover:bg-[#e4dac6] transition flex items-center gap-3">
+                        <span class="text-xl">✦</span>
+                        <div>
+                            <p class="font-cinzel font-bold text-sm text-[#261d15]">Spotify</p>
+                            <p class="font-courier text-xs text-[#6e5844]">@vince</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="w-full max-w-5xl opacity-80 mt-1 flex items-center justify-center overflow-hidden">
+        <svg class="w-full h-6 text-[#dcd2be]" fill="currentColor" viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path d="M0,30 Q30,5 60,30 Q90,5 120,30 Q150,5 180,30 Q210,5 240,30 Q270,5 300,30 Q330,5 360,30 Q390,5 420,30 Q450,5 480,30 Q510,5 540,30 Q570,5 600,30 Q630,5 660,30 Q690,5 720,30 Q750,5 780,30 Q810,5 840,30 Q870,5 900,30 Q930,5 960,30 Q990,5 1020,30 Q1050,5 1080,30 Q1110,5 1140,30 Q1170,5 1200,30 L1200,0 L0,0 Z"></path>
+        </svg>
+    </div>
+
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+            document.getElementById('tab-' + tabId).classList.add('active');
+            document.getElementById('btn-' + tabId).classList.add('active');
+        }
+
+        function openPolaroidModal(title, desc, imgUrl) {
+            const modalId = 'polaroid-inspection-modal';
+            let existingModal = document.getElementById(modalId);
+            if (existingModal) existingModal.remove();
+
+            const modal = document.createElement('div');
+            modal.id = modalId;
+            modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-[#f4eee1] p-6 rounded-lg max-w-md w-full border-4 border-[#3d2e23] shadow-2xl relative space-y-4">
+                    <button onclick="document.getElementById('${modalId}').remove()" class="absolute top-3 right-3 text-[#574435] hover:text-black font-cinzel font-bold text-lg">✕</button>
+                    <div class="text-center">
+                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Evidência Catalogada</span>
+                        <h3 class="font-cinzel font-bold text-xl text-[#211812] mt-1">${title}</h3>
+                    </div>
+                    <div class="w-full h-64 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2] rounded">
+                        <img src="${imgUrl}" alt="${title}" class="object-cover w-full h-full filter sepia">
+                    </div>
+                    <p class="font-typewriter text-sm text-[#382b21] leading-relaxed">${desc}</p>
+                    <div class="text-right">
+                        <button onclick="document.getElementById('${modalId}').remove()" class="px-4 py-2 bg-[#3d2e23] text-[#f4eee1] font-typewriter text-xs rounded hover:bg-[#2b1f17] transition">Fechar Inspecionador</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Cross</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Arquivo CSS Externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-2 sm:p-6 leather-bg">
 
@@ -317,12 +669,12 @@
             <!-- ABA 5: CALENDÁRIO -->
             <div id="tab-calendario" class="tab-content space-y-6">
                 <div class="border-b-2 border-[#3d2e23] pb-4">
-                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Cronograma de Vistorias</span>
+                    <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Cronograma de Vistorias (Oregon, EUA)</span>
                     <h1 class="text-3xl sm:text-4xl font-cinzel font-bold text-[#211812] tracking-wider mt-1">CALENDÁRIO</h1>
                 </div>
 
                 <div class="bg-[#ede4d0] p-5 rounded border border-[#d1c2ad] shadow-sm space-y-4">
-                    <h3 class="font-cinzel font-bold text-base text-[#261d15]">Outubro / 2026</h3>
+                    <h3 id="calendario-titulo" class="font-cinzel font-bold text-base text-[#261d15]">Carregando...</h3>
                     <div class="grid grid-cols-7 gap-2 text-center font-typewriter text-xs">
                         <div class="font-bold text-[#6e5844] py-1">DOM</div>
                         <div class="font-bold text-[#6e5844] py-1">SEG</div>
@@ -332,12 +684,10 @@
                         <div class="font-bold text-[#6e5844] py-1">SEX</div>
                         <div class="font-bold text-[#6e5844] py-1">SÁB</div>
                         
-                        <!-- Dias -->
-                        <div class="p-2 text-[#b09e86]">27</div><div class="p-2 text-[#b09e86]">28</div><div class="p-2 text-[#b09e86]">29</div><div class="p-2 text-[#b09e86]">30</div><div class="p-2 bg-[#dcd0bc] rounded font-bold">1</div><div class="p-2 bg-[#4a3525] text-white rounded font-bold">2</div><div class="p-2">3</div>
-                        <div class="p-2">4</div><div class="p-2">5</div><div class="p-2 bg-[#dcd0bc] rounded">6</div><div class="p-2">7</div><div class="p-2">8</div><div class="p-2">9</div><div class="p-2">10</div>
-                        <div class="p-2">11</div><div class="p-2">12</div><div class="p-2">13</div><div class="p-2 bg-[#dcd0bc] rounded">14</div><div class="p-2">15</div><div class="p-2">16</div><div class="p-2">17</div>
+                        <!-- Dias gerados dinamicamente via JS -->
+                        <div id="calendario-corpo" class="contents"></div>
                     </div>
-                    <p class="font-courier text-xs text-[#574435] mt-2 italic">✦ Destaque (2 de Outubro): Vistoria noturna agendada na ala oeste.</p>
+                    <p class="font-courier text-xs text-[#574435] mt-2 italic">✦ Destaque escuro indica o dia atual em Oregon.</p>
                 </div>
             </div>
 
@@ -384,42 +734,7 @@
         </svg>
     </div>
 
-    <!-- Script de Abas e Modais -->
-    <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-
-            document.getElementById('tab-' + tabId).classList.add('active');
-            document.getElementById('btn-' + tabId).classList.add('active');
-        }
-
-        function openPolaroidModal(title, desc, imgUrl) {
-            const modalId = 'polaroid-inspection-modal';
-            let existingModal = document.getElementById(modalId);
-            if (existingModal) existingModal.remove();
-
-            const modal = document.createElement('div');
-            modal.id = modalId;
-            modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
-            modal.innerHTML = `
-                <div class="bg-[#f4eee1] p-6 rounded-lg max-w-md w-full border-4 border-[#3d2e23] shadow-2xl relative space-y-4">
-                    <button onclick="document.getElementById('${modalId}').remove()" class="absolute top-3 right-3 text-[#574435] hover:text-black font-cinzel font-bold text-lg">✕</button>
-                    <div class="text-center">
-                        <span class="text-xs font-courier text-[#6e5844] tracking-widest uppercase">Evidência Catalogada</span>
-                        <h3 class="font-cinzel font-bold text-xl text-[#211812] mt-1">${title}</h3>
-                    </div>
-                    <div class="w-full h-64 bg-[#2b221d] flex items-center justify-center overflow-hidden border border-[#d1c4b2] rounded">
-                        <img src="${imgUrl}" alt="${title}" class="object-cover w-full h-full filter sepia">
-                    </div>
-                    <p class="font-typewriter text-sm text-[#382b21] leading-relaxed">${desc}</p>
-                    <div class="text-right">
-                        <button onclick="document.getElementById('${modalId}').remove()" class="px-4 py-2 bg-[#3d2e23] text-[#f4eee1] font-typewriter text-xs rounded hover:bg-[#2b1f17] transition">Fechar Inspecionador</button>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-    </script>
+    <!-- Arquivo JS Externo -->
+    <script src="script.js"></script>
 </body>
 </html>
