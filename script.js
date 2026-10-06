@@ -1,11 +1,3 @@
-function switchTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-
-    document.getElementById('tab-' + tabId).classList.add('active');
-    document.getElementById('btn-' + tabId).classList.add('active');
-}
-
 function openPolaroidModal(title, desc, imgUrl) {
     const modalId = 'polaroid-inspection-modal';
     let existingModal = document.getElementById(modalId);
@@ -35,6 +27,9 @@ function openPolaroidModal(title, desc, imgUrl) {
 
 // Função para atualizar o Calendário com base no fuso horário do Oregon (EUA / America/Los_Angeles)
 function gerarCalendarioOregon() {
+    const tituloEl = document.getElementById('calendario-titulo');
+    if (!tituloEl) return; // Só executa se estiver na página de calendário
+
     const agoraOregonStr = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
     const dataOregon = new Date(agoraOregonStr);
 
@@ -47,7 +42,7 @@ function gerarCalendarioOregon() {
         "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
     ];
 
-    document.getElementById('calendario-titulo').innerText = `${nomesMeses[mes]} / ${ano}`;
+    tituloEl.innerText = `${nomesMeses[mes]} / ${ano}`;
 
     const primeiroDiaDaSemana = new Date(ano, mes, 1).getDay();
     const totalDiasMes = new Date(ano, mes + 1, 0).getDate();
