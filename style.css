@@ -1,0 +1,63 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #120e0b;
+    color: #2c241d;
+}
+.font-typewriter { font-family: 'Special Elite', monospace; }
+.font-courier { font-family: 'Courier Prime', monospace; }
+.font-cinzel { font-family: 'Cinzel', serif; }
+
+.leather-bg {
+    background-color: #1a1310;
+    background-image: radial-gradient(circle at 50% 50%, #241a15 0%, #120e0b 100%),
+                    repeating-radial-gradient(circle at 0 0, transparent 0, #000 2px, transparent 4px);
+    background-blend-mode: overlay;
+}
+.aged-paper {
+    background-color: #f4eee1;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    box-shadow: inset 0 0 40px rgba(110, 85, 60, 0.15), 0 20px 40px rgba(0,0,0,0.6);
+}
+.binder-ring {
+    background: linear-gradient(90deg, #111, #555 30%, #fff 50%, #555 70%, #111);
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.6), 2px 5px 8px rgba(0,0,0,0.8);
+    border-radius: 9999px;
+}
+.vintage-polaroid {
+    background: #fff;
+    padding: 10px 10px 25px 10px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+    transform: rotate(-1.5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vintage-polaroid:hover { 
+    transform: rotate(0deg) scale(1.02); 
+    box-shadow: 4px 8px 20px rgba(0,0,0,0.35);
+}
+.tab-btn {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.tab-btn.active {
+    background-color: #f4eee1;
+    color: #1a1310;
+    border-left: 4px solid #4a3525;
+    font-weight: bold;
+    transform: translateX(4px);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e8dfcf; }
+::-webkit-scrollbar-thumb { background: #b5a48f; border-radius: 3px; }
