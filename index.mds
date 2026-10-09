@@ -413,21 +413,6 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Cross</title>
-    <link rel="icon" type="image/x-icon" href="icon.png">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Arquivo CSS Externo -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="min-h-screen flex flex-col items-center justify-center p-2 sm:p-6 leather-bg">
 
     <!-- Renda Gótica Superior -->
     <div class="w-full max-w-5xl opacity-80 mb-1 flex items-center justify-center overflow-hidden">
@@ -734,7 +719,5 @@
         </svg>
     </div>
 
-    <!-- Arquivo JS Externo -->
+    <!-- Arquivo JS Externo 
     <script src="script.js"></script>
-</body>
-</html>
